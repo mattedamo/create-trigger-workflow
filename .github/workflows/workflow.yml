@@ -1,0 +1,12 @@
+name: trigger-when-create
+
+on: 
+  create
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    steps:
+    
+    - run: echo "created!"
