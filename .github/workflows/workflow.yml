@@ -17,6 +17,12 @@ jobs:
         python-version: "3.x"
 
     - run: python script.py
-    - run: python script2.py
+    - run: |
+        output=$(python release_mail_generator.py v2.21)
+        echo "::set-output name=dir::$output"
+      id: dir
+    
+    - run: mkdir "${{ steps.dir.outputs.dir }}"
+
     
     - run: echo "pushed!"
