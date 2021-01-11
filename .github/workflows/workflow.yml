@@ -16,13 +16,8 @@ jobs:
       with: 
         python-version: "3.x"
 
-    - run: python script.py
     - run: |
-        output=$(python script2.py)
-        echo "::set-output name=dir::$output"
-      id: dir
-    
-    - run: mkdir "${{ steps.dir.outputs.dir }}"
-
+        python script.py
+        echo $MYVAR
     
     - run: echo "pushed!"
