@@ -1,13 +1,24 @@
 name: trigger-when-create
 
 on: 
-  push: 
-    branches: release/**
+  push
 
 jobs:
   setup:
     name: Setupe
     runs-on: ubuntu-latest
     steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+    
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with: 
+        python-version: "3.x"
+
+    - run: python script.py
+    - run: echo "$MYVAR"
+    - run: mkdir $MYVAR
+    - run: ls
     
     - run: echo "pushed!"
