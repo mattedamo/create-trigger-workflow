@@ -18,7 +18,7 @@ jobs:
 
     - run: python script.py
     - run: echo "$MYVAR"
-    - run: mkdir $MYVAR
+    - run: mkdir ${MYVAR}
     - run: ls
     
     - run: echo "pushed!"
