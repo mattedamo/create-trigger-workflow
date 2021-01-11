@@ -18,7 +18,7 @@ jobs:
 
     - run: python script.py
     - run: |
-        output=$(python release_mail_generator.py v2.21)
+        output=$(python script2.py)
         echo "::set-output name=dir::$output"
       id: dir
     
