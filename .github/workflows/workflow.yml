@@ -17,7 +17,13 @@ jobs:
         python-version: "3.x"
 
     - run: python script.py
-    - run: echo "$MYVAR"
+    - run: |
+        echo ${MYVAR}
+        echo "${MYVAR}"
+        echo ${{MYVAR}}
+        echo "${{MYVAR}}"
+        
+        
     - run: mkdir ${MYVAR}
     - run: ls
     
