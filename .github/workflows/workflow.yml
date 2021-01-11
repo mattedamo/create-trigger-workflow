@@ -18,13 +18,13 @@ jobs:
 
     - run: python script.py
     - run: |
-        echo ${MYVAR}
+        echo "${env.MYVAR}"
         echo "${MYVAR}"
         echo ${{MYVAR}}
-        echo "${{MYVAR}}"
+        echo "${{env.MYVAR}}"
         
         
-    - run: mkdir ${MYVAR}
+    - run: mkdir ${{MYVAR}}
     - run: ls
     
     - run: echo "pushed!"
