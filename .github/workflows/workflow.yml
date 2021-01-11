@@ -1,12 +1,13 @@
 name: trigger-when-create
 
 on: 
-  create
+  push: 
+    branches: "release/*"
 
 jobs:
   setup:
-    name: Setup
+    name: Setupe
     runs-on: ubuntu-latest
     steps:
     
-    - run: echo "created!"
+    - run: echo "pushed!"
