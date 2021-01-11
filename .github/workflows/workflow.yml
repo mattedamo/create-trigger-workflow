@@ -17,14 +17,6 @@ jobs:
         python-version: "3.x"
 
     - run: python script.py
-    - run: |
-        echo "${env.MYVAR}"
-        echo "${MYVAR}"
-        echo "${{MYVAR}}"
-        echo "${{env.MYVAR}}"
-        
-        
-    - run: mkdir "${{MYVAR}}"
-    - run: ls
+    - run: python script2.py
     
     - run: echo "pushed!"
