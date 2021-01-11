@@ -12,5 +12,6 @@ jobs:
     steps:
     - name: print info
       run: echo " ${{github.event.ref}}"
-    - run: echo "${GITHUB_REF}"
+    - run: echo $GITHUB_REF
+    - run: printenv
       
