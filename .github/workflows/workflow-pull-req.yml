@@ -1,0 +1,15 @@
+name: delete
+
+on: 
+  pull_request:
+    types: closed
+    
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: print info
+      run: echo " ${{github.event.ref}}, ${GITHUB_REF}"
+      
